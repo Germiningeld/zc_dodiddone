@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zc_dodiddone/theme/theme.dart';
 
+import 'main_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -100,7 +102,10 @@ class _LoginPageState extends State<LoginPage> {
               // Login/Register Button
               ElevatedButton(
                 onPressed: () {
-                  // Handle login/registration logic here
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MainPage()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
